@@ -1,0 +1,9 @@
+package components
+
+import "github.com/Asaadziad/devlog/Repo"
+
+templ Projects(repos []main.Repo){
+    <div class="container text-center">
+        @ProjectCard(repos[0])
+    </div>
+}
