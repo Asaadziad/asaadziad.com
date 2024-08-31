@@ -1,8 +1,8 @@
 package components
 
-templ Body(){
+templ Body(projects templ.Component){
     <body>
-        @Projects()
-       <script src="public/htmx.min.js"></script>
+        @projects
+       <script src="/static/htmx.min.js"></script>
     </body>
 }

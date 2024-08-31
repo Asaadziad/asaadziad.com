@@ -1,1 +1,5 @@
 *.exe
+node_modules
+*.json
+tailwind.config.js
+styles/*

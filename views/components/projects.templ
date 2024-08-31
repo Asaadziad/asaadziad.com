@@ -1,9 +1,24 @@
 package components
 
-import "github.com/Asaadziad/devlog/Repo"
+import "github.com/Asaadziad/devlog/types"
 
-templ Projects(repos []main.Repo){
-    <div class="container text-center">
-        @ProjectCard(repos[0])
-    </div>
+func intMin(x int, y int) int {
+    if x < y {
+        return x
+    } 
+    return y
+}
+
+templ Projects(repos []types.Repo){
+        <div class="container max-auto">
+            <div class="container mx-auto flex flex-wrap items-center justify-center sm:flex-col md:flex-row">
+            
+            for i:=0; i < intMin(6, len(repos)) ; i++ {
+                @ProjectCard(repos[i])
+            }
+            </div>
+            <p>pages 1 2 3 ...</p>
+        </div>
+        
+    
 }
