@@ -4,16 +4,27 @@ import "github.com/Asaadziad/devlog/views/components"
 
 templ Index(projects templ.Component){
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Asaadziad</title>
         <link href="/static/tailwind.css" rel="stylesheet">
-    </head> 
-    @components.Nav()
-    @components.Header() 
-    @components.Body(projects) 
-    @components.Footer()
+        <script>
+            function toggleDarkMode() {
+                document.documentElement.classList.toggle('dark');
+                document.documentElement.classList.toggle('light');
+            }
+        </script>
+    </head>  
+        <button
+            onclick="toggleDarkMode()"
+            class="fixed top-4 right-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow-md"
+        >
+            Toggle Dark Mode
+        </button>
+        @components.Header() 
+        @components.Body(projects) 
+        @components.Footer()
     </html>
 }

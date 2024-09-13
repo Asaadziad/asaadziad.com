@@ -1,8 +1,16 @@
 package components
 
 templ Body(projects templ.Component){
-    <body>
-        @projects
-       <script src="/static/htmx.min.js"></script>
+    <body class="dark:bg-gray-900 dark:text-white">
+        <main class="space-y-16">
+            @About()
+            @Experience()
+            @Education()
+            <div id="projects-container" hx-trigger="load" hx-get="/fetch-repos" hx-swap="innerHTML">
+            Loading projects...
+            </div>
+        </main>
+
+	 <script src="/static/htmx.min.js"></script>
     </body>
 }

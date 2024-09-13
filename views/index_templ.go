@@ -28,11 +28,7 @@ func Index(projects templ.Component) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Asaadziad</title><link href=\"/static/tailwind.css\" rel=\"stylesheet\"></head>")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = components.Nav().Render(ctx, templ_7745c5c3_Buffer)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"light\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Asaadziad</title><link href=\"/static/tailwind.css\" rel=\"stylesheet\"><script>\r\n            function toggleDarkMode() {\r\n                document.documentElement.classList.toggle('dark');\r\n                document.documentElement.classList.toggle('light');\r\n            }\r\n        </script></head><button onclick=\"toggleDarkMode()\" class=\"fixed top-4 right-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow-md\">Toggle Dark Mode</button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -10,15 +10,12 @@ func intMin(x int, y int) int {
 }
 
 templ Projects(repos []types.Repo){
-        <div class="container max-auto">
-            <div class="container mx-auto flex flex-wrap items-center justify-center sm:flex-col md:flex-row">
-            
+    <div class="max-w-6xl mx-auto p-6">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             for i:=0; i < intMin(6, len(repos)) ; i++ {
                 @ProjectCard(repos[i])
             }
-            </div>
-            <p>pages 1 2 3 ...</p>
         </div>
-        
-    
+    </div>
 }
